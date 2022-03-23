@@ -1,10 +1,15 @@
+//WELCOME
+//This tutorial draft is intended to teach absoulte new comers to the basics of programing by building something awesome!
+//Here you will learn:
+// Variables, functions, arrays, for loops, methods, parameters
+
 // This is the replication of a very old data compression algorithm called "Run Length Encoding"
 //https://en.wikipedia.org/wiki/Run-length_encoding#:~:text=Run%2Dlength%20encoding%20(RLE),than%20as%20the%20original%20run
 
 // In this example we will be creating a "Image" compression algorithm.
 // The function COMPRESS will take the representation of a JPG in the form of a string EG: 'aaabbbuiuuddddd'
 // it will count the number of times in a row a letter appears.
-// It will then combine the letter and number of times in a row it appears into EG: 'a1
+// It will then combine the letter and number of times in a row it appears into EG: 'a3'
 // Basically it makes this data :'aaabbbuiuuddddd' into this data: 'a3b3u1i1u2d5'
 // You are about to learn how a simple compression algorithm works! Let's go!
 
@@ -33,10 +38,10 @@ let imgBuilder = () => {
 		let randomMaxTen = Math.floor(Math.random() * (10 - 1) + 1);
 
 		// OK we are almost done!
-		// In Javascript things inside parenthisis are evaluated first () and when a parenthesis is inside of a parenthisis like (A(B))
+		// In Javascript things inside parenthesis are evaluated first () and when a parenthesis is inside of a parenthesis like (A(B))
 		// B gets evaluated 1st and A gets evaluated 2nd.
 		// in looking at the line below what gets evaluated first ? randomMaxTen does! Lets say randomMaxTen happens to evaluate to 7 for this example.
-		// next up is the outer parenthisis, lets say randomChar evaluated to E. See that .repeat part? its calling the repeat method. And since we decided that randomMaxTen is = 7. Then everything inside the Parenthesis to the right of .push will evaluate to...
+		// next up is the outer parenthesis, lets say randomChar evaluated to E. See that .repeat part? its calling the repeat method. And since we decided that randomMaxTen is = 7. Then everything inside the Parenthesis to the right of .push will evaluate to...
 		// Yup you guessed it EEEEEEE
 		// Lets use the .push method to PUSH those letters inside of the storageArr. And now storageArr = ['EEEEEEE'];
 		storageArr.push(randomChar.repeat(randomMaxTen));
@@ -48,7 +53,7 @@ let imgBuilder = () => {
 	// We should return a string.
 	// Remember how our storageArr is an ARRAY?  But we want a string right?
 	// Well thankfully there is a METHOD called .join which will take an array and combine all the items into the form of a string.
-	// Great! So whats inside the parenthisis? in the case of this .join method, what's inside is called a PARAMETER.
+	// Great! So whats inside the parenthesis? in the case of this .join method, what's inside is called a PARAMETER.
 	// See methods are functions themselves! This are part of javascript. And are VERY useful.
 	// So METHODS are just FUNCTIONS that we dont have to program. Sweet!!
 	// The .join method takes a PARAMETER called SEPERATOR it defines what to seperate the items by. Since there is nothing between the quotes, yup I dont want them seperated at all!
@@ -60,7 +65,9 @@ let imgBuilder = () => {
 	// Congrats you now know how a random data generating algorithm works!
 }
 
-// Percentage compressed Algorithm - takes initial length of uncompressed string and the output length of compressed string and does some basic math
+// EVERYTHING BELOW HAS NOT BEEN WRITTEN FOR  NEW COMERS. YET..... CHECK IT OUT IF  WANT.
+
+// Percentage compressed Algorithm - takes initial length of uncompressed string and the output length of compressed string and does some basic math to display the percentage of compression achieved
 let percentageCompressed = (inputLength, outputLength) => {
 	let difference = inputLength - outputLength;
 	let average = difference / inputLength;
