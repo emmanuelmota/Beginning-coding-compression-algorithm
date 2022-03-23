@@ -6,7 +6,7 @@
 
 
 //First we need an "Image" to compress:
-//imgBuilder Produces a string representing an imgage.
+//imgBuilder Produces a string representing an  image.
 // It does this by creating a string using a random letter of alphabet, repeated a random number of times.. EG: 'aaabbbuiuuddddd'
 var imgBuilder = () => {
 	// Yep its the alphabet..
@@ -15,7 +15,7 @@ var imgBuilder = () => {
 	var storageArr = [];
 	// Loop the number of times there are letters in the alphabet array
 	for (let i = 0; i <= alphabet.length; i ++) {
-		// Produce index EG POSITON OF a random letter
+		// Produce random number  which we will use to select a letter at random form the alphabet
 		let randomNumber = Math.floor(Math.random() * (alphabet.length - 1) + 1);
 		// Select a random Character from the alphabet array at the position in the array chosen by randomNumber
 		 let randomChar = alphabet[randomNumber];
