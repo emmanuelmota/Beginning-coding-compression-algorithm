@@ -13,22 +13,28 @@
 // It will then combine the letter, and number of times in a row it appears, together EG: 'a3'
 // Basically it makes this data :'aaabbbuiuuddddd' into this compressed data: 'a3b3u1i1u2d5'
 
-// You are about to learn how a simple compression algorithm works! Let's go!
+// “IF YOU WISH TO MAKE AN APPLE PIE FROM SCRATCH, YOU MUST FIRST INVENT THE UNIVERSE” - Carl Sagan
 
 //First we need some data to compress!:
-// Let's create data representing an image using a custom function, I am calling imgBuilder.
-// imgBuilder Produces a string representing an image.
-// It does this by creating a string, using a random letter from the alphabet, repeated a random number of times.. EG:'aaabbbuiuuddddd'
-// In this line I am declaring the function.The format for functions is as follows:
+// Let's create data representing an image using a custom function, I am going to call it imgBuilder.
+// the imgBuilder function below Produces a string ( A STRING is a datatype and it's just a letter or letters EG:"I am a string" remember to use 	quotes)
+// This STRING our imgBuilder function will create and output will be the image data we will compress in the next function!
+// imgBuilder does this by forming a STRING, using a random letter from the alphabet, repeated a random number of times.. EG:'aaabbbuiuuddddd'
+// On this first line I am declaring the function.The format for functions is as follows:
+
 // function aNameForTheFunction (PARAMETERS, GO, HERE) {
 //   The code that I want to execute each time I call this function goes inside of the curly brackets
 // };
+
 // You will see semicolons a lot in Javascript (The Programming Language we are writing this tutorial in)
 // Semicolons just mean it's the end of the command, function, variable ETC.
+// Note that imgBuilder takes no PARAMETERS because the () are empty. We will see some parameters and how they work later.
+
 function imgBuilder() {
   // Here I am declaring that a VARIABLE, called alphabet, should be equal to the value to the right of the equals sign.
   // In this case it's a data structure called an ARRAY, see those square brackets? That means it's an ARRAY.
   // In this alphabet ARRAY are a bunch of items, in this case it's the letters of... The Alphabet!
+	// See how each letter is surrounded by Quotes? That means that each letter is a STRING. Cool! Each string is seperated by a comma.
   var alphabet = [
     "a",
     "b",
@@ -59,18 +65,18 @@ function imgBuilder() {
   ];
   // VARIABLES can be named, and store ANYTHING including ARRAYS.
   // For examples;
-  // var x = y;
-  // var name = 'Emmanuel';
-  // var age = 100;
+  // var x = y;        Variables can equal variables!
+  // var name = 'Emmanuel';   Strings...
+  // var age = 100;  Numbers....
   // Next lets create an empty ARRAY to store letters in. I'll call it storageArray. Pretty sweet name right?
   var storageArray = [];
-  // Ok our next big topic is called a "For loop". Loops do just that. They loop  and execute the code inside of it over and over again
-  // until a CONDITION is met. We can make loop 1 or 1000000000000 times or more. Or it could not run at all depending on the CONDITON.
-  // Within the parenthesis () are three expressions, each one is seperated by a semicolon these are called - (INITIALIZATION; CONDITION; FINAL-EXPRESSION)
-  // In the INITIALIZATION expression I declare that "i" will be equal to 0... That's all. Since we see ; after 0 that means its the end of
+  // Ok our next big topic is called a "For loop". Loops do just that. They loop and execute the code inside of it over and over again
+  // At least they will loop ntil a CONDITION is met. We can make loop 1 or 1000000000000 times or more... Or it could not run at all depending on the CONDITON.
+  // Look below at line 89. inside the parenthesis ()  are three expressions, each one is seperated by a semicolon these are called - (INITIALIZATION; CONDITION; FINAL-EXPRESSION)
+  // In the INITIALIZATION expression I declare that "i" will be equal to 0... That's all. Since we see a ; after 0, that means its the end of
   // the first expression.
-  // Now to our middle expression: CONDITION. The loop will only execute if the CONDITION is TRUE. /
-  // We just set i = 0. Our alphabet.length = 26  So this expression resolves to to TRUE because 0 is less than or equal.
+  // Now to our middle expression: CONDITION. The loop will only execute if the CONDITION is TRUE.
+  // We just set i = 0. Our alphabet.length = 26  So this expression resolves to TRUE because 0 is less than or equal to 26 .Basically is 0 < or = 26? TRUE
   // So the loop runs the code inside! eventually this CONDITION will be FALSE. More on this later..
   // AFTER the code inside the loop is run, the loop looks at the last condition called the
   // FINAL-EXPRESSION  i++ means increment i by 1. i is now equal to 1!
@@ -139,13 +145,18 @@ function imgBuilder() {
   // Congrats! You are a PRO-GRAMMER!
 }
 
-// EVERYTHING BELOW HAS NOT BEEN ANNOTATED FOR NEWBS YET.....  BUT CHECK IT OUT IF WANT.....
 
-// Percentage compressed Algorithm - takes initial length of uncompressed string and the output length of compressed string and does some basic math to display the percentage of compression achieved
+// Percentage compressed Algorithm - Calculates and displays the percentage of compression applied to the data.
+// It takes 2 PARAMETERS  EG intputLength and outPutLength. Which are the length of the Uncompressed data, and the length of the Compressed data.
+// It  does some basic math to display the percentage of compression achieved.
 var percentageCompressed = (inputLength, outputLength) => {
+	// let's make a variable called difference to store the difference between intputLength and outPutLength
+	// We declare the variable and call it: difference. Now lets make it store the result of inputLength minus the outPutLength.
+	// IF inputLength is = 10, and outPutLength is 6..   10-6 = 4   EG difference = 4
   var difference = inputLength - outputLength;
+	// Let's do somethig similar, this time finding the average by dividing the difference by the input length 4/10 =
   var average = difference / inputLength;
-  // Returns the average times 100 for a percentage and limits it to 4 characters EG: 22.42%
+  // Returns the average times 100. Converting it to a percentage and limits it to 4 characters for example: 22.42 instead of 22.422222222222
   return (average * 100).toPrecision(4);
 };
 
