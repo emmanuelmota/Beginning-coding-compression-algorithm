@@ -160,7 +160,7 @@ var builtImg = imgBuilder();
 // For Example:
 // "aaabbc"
 // "a3b2c1"
-function compress (src) {
+function compress(src) {
   // We create storage array to store our compressed data
   var arr = [];
   // Set intial variables to my defaults
@@ -204,7 +204,7 @@ function compress (src) {
   // So if arr = ['a3,'b2']
   // compressedString = "a3b2"
   var compressedString = arr.join("");
-// Congrats ! we just compressed that data!
+  // Congrats ! we just compressed that data!
   // Let's return this compressed string out of this function so we can use it somewhere else!
   return compressedString;
 };
