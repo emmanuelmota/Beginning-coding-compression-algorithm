@@ -52,7 +52,7 @@ function imgBuilder() {
   // I'll call it storageArray. Pretty sweet name right?
   var storageArray = [];
   // Ok our next big topic is called a "For loop". Loops do just that. They loop and execute the code inside of it over and over again
-  // At least they will loop ntil a CONDITION is met. We can make loop 1 or 1000000000000 times or more...
+  // At least they will loop until a CONDITION is met. We can make loop 1 or 1000000000000 times or whatever we like.
   // Or it could not run at all depending on the CONDITON.
   // Look below where it starts with for. inside the parenthesis ()  are three expressions,
   // each one is seperated by a semicolon these are called - (INITIALIZATION; CONDITION; FINAL-EXPRESSION)
