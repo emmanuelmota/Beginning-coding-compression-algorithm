@@ -1,21 +1,21 @@
-//WELCOME
-//This is a draft of tutorial intended to teach absolute new comers to the basics of programing by creating a compression algorithm!
+// WELCOME
+// This is a draft of tutorial intended to teach absolute new comers to the basics of programing by creating a compression algorithm!
 
-//Here you will learn:
+// Here you will learn:
 // Variables, functions, arrays, for loops, methods, parameters
 
 // This is the replication of a very old data compression algorithm called "Run Length Encoding"
-//https://en.wikipedia.org/wiki/Run-length_encoding#:~:text=Run%2Dlength%20encoding%20(RLE),than%20as%20the%20original%20run
+// https://en.wikipedia.org/wiki/Run-length_encoding#:~:text=Run%2Dlength%20encoding%20(RLE),than%20as%20the%20original%20run
 
 // In this example we will be creating a "Image" compression algorithm.
 // The function COMPRESS will take the representation of a JPG in the form of a string EG: 'aaabbbuiuuddddd'
 // it will count the number of times in a row a letter appears.
 // It will then combine the letter, and number of times in a row it appears, together EG: 'a3'
-// Basically it makes this data :'aaabbbuiuuddddd' into this compressed data: 'a3b3u1i1u2d5'
+// TLDR: it makes this data :'aaabbbuiuuddddd' into this compressed data: 'a3b3u1i1u2d5'
 
 // “IF YOU WISH TO MAKE AN APPLE PIE FROM SCRATCH, YOU MUST FIRST INVENT THE UNIVERSE” - Carl Sagan
 
-//First we need some data to compress!:
+// First we need some data to compress!:
 // Let's create data representing an image using a custom function, I am going to call it imgBuilder.
 // the imgBuilder function below Produces a string ( A STRING is a datatype and it's just a letter or letters
 // EG:"I am a string" we must use quotes if we want it to be a string
@@ -78,8 +78,8 @@ function imgBuilder() {
     // They should always be in a matching pairs. Good  [], {}, (). ({[]}) Bad: [, }, (.. Etc.
 
     // Lets produce a random number!
-    // This variable I named randomNumber stores (As all variables do) whatever is to the right of the equals sign. In this case it will be a random number between 26 and 1. Don't worry about the Math stuff. Just imagine that on the right of the equals sign.
-    // there is a random number.. Thats whats happening behind the scences..
+    // This variable I named randomNumber stores (As all variables do) whatever is to the right of the equals sign. In this case it will be a random number between 26 and 1.
+    // Don't worry about the Math stuff. Just imagine that on the right of the equals sign there is a random number.. That's whats happening behind the scences..
     var randomNumber = Math.floor(Math.random() * (alphabet.length - 1) + 1);
     // Lets make a variable to store a random Character from the alphabet array.
     // See the brackets [ ] after alphabet below? we can pick a specific item from an ARRAY by entering a number between those brackets.
@@ -92,7 +92,7 @@ function imgBuilder() {
     // And alphabet = ["a", "b", "c"]
     // this variable would store "b"
     var randomCharacter = alphabet[randomNumber];
-    //Next let's make a variable that stores how many times a letter repeats.
+    // Next let's make a variable that stores how many times a letter repeats.
     // I only want them to repeat say... 10 times maximum.
     // So I create a variable called randomMaxTen, and use the .random() method (You will learn more about methods another time)
     // and define that it should be a max of 10 and a minimum of 1.
@@ -173,7 +173,7 @@ function compress(src) {
     // And for example src = "aaabjjjjssdddkkkkk"
     // currentChar = "a";
     var currentChar = src[i];
-    //If the statement inside the (  ) is TRUE.. The code between the { } will run!
+    // If the statement inside the (  ) is TRUE.. The code between the { } will run!
     // So this code inside the (  ) below is asking: is lastChar equal to an empty string?
     // We set it to that above so on the first run of the loop this statement is TRUE. So it runs the code inside { }
     // The code it runs sets lastChar to the value of currentChar.
@@ -181,7 +181,7 @@ function compress(src) {
     if (lastChar === "") {
       lastChar = currentChar;
     }
-    //If the the current character is the same as the lastChar EG: 'aa' increment the count
+    // If the the current character is the same as the lastChar EG: 'aa' increment the count
     if (currentChar === lastChar) {
       count++;
     } else {
@@ -199,7 +199,7 @@ function compress(src) {
     }
     // This loop runs over the entire src for as many times as there are characters
   }
-  //When we have finished those loops.
+  // When we have finished those loops.
   // We combine all the values at all the indexes of arr into a single string using .join("")
   // So if arr = ['a3,'b2']
   // compressedString = "a3b2"
