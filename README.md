@@ -15,7 +15,8 @@ The percentage of compression we achieved.</br>
 
 In doing all of this you will learn the basic building blocks and patterns of programming. </br>
 Want to jump right in ?</br>
-Open this file and get started: [runLengthEncoding.js](https://github.com/emmanuelmota/Beginning-coding-compression-algorithm/blob/160756d23f05a196548e8edeff1c1419a0027993/runLengthEncoding.js)</br>
+Open this file to see the tutorial [runLengthEncoding.js](https://github.com/emmanuelmota/Beginning-coding-compression-algorithm/blob/160756d23f05a196548e8edeff1c1419a0027993/runLengthEncoding.js)</br>
+In another window open a coding environment (It's free to sign up) and get started! [REPL Coding environment](https://replit.com/)</br>
 Want to see JUST the code? [Click justTheCode.js](https://github.com/emmanuelmota/Beginning-coding-compression-algorithm/blob/master/justTheCode.js)
 This tutorial is written in Javascript.</br>
 If you have comments or suggestions please leave them here.</br>
