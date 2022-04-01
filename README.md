@@ -17,7 +17,7 @@ In doing all of this you will learn the basic building blocks and patterns of pr
 Want to jump right in ?</br>
 Open this file to see the tutorial [runLengthEncoding.js](https://github.com/emmanuelmota/Beginning-coding-compression-algorithm/blob/160756d23f05a196548e8edeff1c1419a0027993/runLengthEncoding.js)</br>
 In another window open a coding environment (It's free to sign up) and get started! [REPL Coding environment](https://replit.com/)</br>
-Want to see JUST the code? [Click justTheCode.js](https://github.com/emmanuelmota/Beginning-coding-compression-algorithm/blob/master/justTheCode.js)
+Want to see JUST the code? Open [justTheCode.js](https://github.com/emmanuelmota/Beginning-coding-compression-algorithm/blob/master/justTheCode.js)</br>
 This tutorial is written in Javascript.</br>
 If you have comments or suggestions please leave them here.</br>
 If you would like to contribute, even better!</br></br>
